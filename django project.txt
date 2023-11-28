@@ -1,0 +1,156 @@
+HOW TO KEEP THIS PROEJCT IN RESUME
+
+Project name: Institute management system
+langauges : python 3.10
+frameworks : django
+Database : mysql
+front end : html5, css, dtl
+IDE : pycharm
+
+Description: The main objective of this project is to manage students information of an institution. 
+This project has a registration page and login page for institute management.
+The main feature of this project is, admin can insert student details, view all student details in table format, admin can update and delete the student details.
+In this project I have used MVT design pattern.
+In this project I have used 7 templates (html files) for UI designing
+There is a navigation bar to traverse through all pages.
+There are 2 model files for table creationg.
+I have used ORM for databas interaction in this project.
+I have used urls.py file for mapping urls with views.
+I have used views.py file for writing website functionality [or] business logic.
+I have used static folder for keeping all css and images.
+---------------------------------------------------------------------------
+
+
+
+Explanation will start from here........... 
+
+
+While explaining in the interview:
+Student must explain the project in 4 steps
+
+TECHNOLOGIES USED IN THE PROJECT
+--------------------------------
+Title of my project is Institute management system.
+In this project i have used python & django framework as server side code
+mysql database as back end
+ORM for database interaction
+HTML5, CSS, DTL for front end
+and pycharm editor
+
+FEATURES OF THE PROJECT
+------------------------
+The main objective of this project is to manage students information of an institution. This project will be used college admin.
+This project has a registration page and login page for institute management.
+The main feature of this project is, admin can insert student details, view all student details in table format, admin can update and delete the student details.
+
+TECHNICAL ASPECTS OF PROJECT
+------------------------------
+In this project I have used MVT design pattern.
+In this project I have used 7 templates (html files) for UI designing
+There is a navigation bar to traverse through all pages.
+There are 2 model files for table creationg.
+I have used ORM for databas interaction in this project.
+I have used urls.py file for mapping urls with views.
+I have used views.py file for writing website functionality.
+I have used static folder for keeping all css and images.
+
+
+ONE PAGE EXPLAINATION
+----------------------
+I will explain add student page code flow
+I am using addstudent.html file for this
+This page has 2 input boxes where admin can enter student name and age, and from drop down box admin can select student course.
+when admin clicks save student button , it is going to urls.py and searches for /readdata url which is mapped to views.py read() function, 
+In read() function I am reading student information from request object.
+
+I am using ORM to save student information into student table.
+I am using student model class to store student details into the database table.
+
+I am creating student model class object and using save() function to save
+student data into student table in mysql.
+
+------------------------------------------
+
+QUESTIONS FOR THIS PROJECT
+
+1. who will use this project? student or college management?
+ans: this project is used by college management to manage students data.
+
+2. what is the purpose of this project?
+ans: management can see how many students are enrolling to the courses, and also they can update and delete the students data.
+
+3. what is urls?
+ans: urls.py contains all urls of our module
+     urls.py is a python file used to map project urls with views functionality.
+
+4. what is views?
+ans: views.py is a pthon file which contains functions mapped to urls.
+     views contains main functionality(business logic) of project.
+     it is link between template and model in MVT.
+     
+5. What is MVT?
+ans : MVT stands for Model-View-Template.
+	Django uses MVT architecture for developing websites.
+
+6. What is model, in MVT?
+ans : In MVT, Model will act as interface with database.
+      Model represents data access layer which contains All database related logic
+
+7. what is template, in MVT?
+ans : template represents UI (user interface) part of the web application. 
+      Templates are generally html files.
+
+8. What is DTL?
+ans: DTL stands django template language.
+     Using DTL we can write Django code in HTML files
+
+9.  What is ORM?
+ans : ORM stands for Object Relational Mapping. 
+      ORM allows us to interact with database from django applicatio.
+      we can insert, update, delete and query objects from any RDBMS using ORM
+
+10. How will you connect database from django?
+ans : For connecting to a database from django we need to follow below steps.
+1. Go to settings.py and add database configurations
+2. Create a model class representing the database table
+3. Use below commands to create tables
+   a. python manage.py migrate
+   b. python manage.py makemigration
+
+11. What is Model class?
+ans : Model is a python class which is mapped to a database table.
+
+12. Which ORM command we need to use to insert a row into a table?
+ans : modelclassobject.save()
+
+13. Which ORM command we need to use to get all rows from a table?
+ans : ModelClassName.objects.all() 
+
+14. What are static files?
+ans : Css, images, and java script files used in the project are considered as static files
+
+15. What are the commands used to create and run a django project?
+ans : django-admin startproject ProjectName
+      python manage.py runserver
+
+16. What is the use of settings.py file?
+ans : Settings.py file will contain all configurations related to current 
+      project like database connection settings etc
+
+17. What is manage.py file?
+ans : Every django project will have one manage.py file.
+     It is a command line utility file which can be used to create super user, make database migrations, to run server
+
+18. What is django admin panel?
+ans : Django comes with an automatic admin interface which can be used to manage content on our website.
+Admin panel can be used by website owner or admin to control the data
+
+19. How will you create users in django?
+ans : 
+user = User.objects.create_user(username=name,email=email,password=password)
+user.save()
+
+20. How will you validate [or] authenticate user credentials in django?
+ans : 
+user = authenticate(username=username,password=password)
+user will be None if credentails are wrong, otherwise user credentials are valid
